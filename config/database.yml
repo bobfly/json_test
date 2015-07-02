@@ -1,0 +1,19 @@
+common: &common
+  host: localhost
+  username: doctorhouse
+  password: <enter your password>
+
+development:
+  <<: *common
+  adapter: postgresql
+  database: doctor_house_development
+
+test:
+  <<: *common
+  adapter: postgresql
+  database: doctor_house_test
+  host: localhost
+
+staging:
+  adapter: postgresql
+  database: doctor_house_development
